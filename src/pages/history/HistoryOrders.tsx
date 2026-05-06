@@ -18,7 +18,7 @@ const HistoryOrders: FC = () => {
     accessToken = accessTokenKey.replace(/^.{7}/, '')
   }
 
-  const urlWebSocket = `wss://norma.nomoreparties.space/orders?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MWYzM2FjNmQyOTk3MDAxY2FhZDI2ZSIsImlhdCI6MTc3ODA5MzIyMSwiZXhwIjoxNzc4MDk0NDIxfQ.u_k7vaq_3rbNo1GAW2VLkthXTBtSwUi5vnfb0NbVIg8`;
+  const urlWebSocket = `wss://norma.nomoreparties.space/orders?accessToken=${accessToken}`;
 
   useEffect(() => {
     dispatch(connect(urlWebSocket));
