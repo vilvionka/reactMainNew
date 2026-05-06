@@ -1,0 +1,43 @@
+.box {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.number span {
+  font-family: 'Iceland', sans-serif;
+  font-size: 48px;
+  line-height: 36px;
+  color: #F2F2F3;
+}
+
+.number img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 215px;
+  height: 64px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #F2F2F3;
+  background: linear-gradient(63.18deg, #801AB3 0%, #4C4CFF 100%);
+  border-radius: 64px;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+}

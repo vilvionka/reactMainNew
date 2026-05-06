@@ -1,0 +1,54 @@
+.image {
+  width: 480px;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.name {
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #F2F2F3;
+}
+
+.box {
+  margin-top: 32px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.item {
+  width: calc(25% - 15px);
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #8585AD;
+}
+
+.item span:last-child {
+  font-family: 'Iceland', sans-serif;
+  font-size: 28px;
+  line-height: 24px;
+}
+.container{
+  max-width: 720px;
+  padding: 40px 40px 60px 40px;
+  width: 100%;
+  margin: 100px auto 0 auto;
+}
+.container img{
+  margin: 0 auto;
+  display: block;
+}

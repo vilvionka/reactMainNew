@@ -1,0 +1,60 @@
+
+.card{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.icon{
+  flex-shrink: 0;
+}
+
+.block{
+  display: flex;
+  background: #1C1C21;
+  border-radius: 40px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px 0 24px;
+  border-radius: 40px;
+  height: 80px;
+}
+
+
+
+.price {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+
+
+.price span {
+  color: #F2F2F3;
+  font-size: 28px;
+  line-height: 24px;
+  font-family: "Iceland", sans-serif;
+}
+
+.block p {
+  color: #F2F2F3;
+  margin: 0 20px;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+}
+.block img{
+  width: 80px;
+  height: 40px;
+}
+.price img {
+  margin-left: 11px;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.price img:last-child{
+  cursor: pointer;
+}
