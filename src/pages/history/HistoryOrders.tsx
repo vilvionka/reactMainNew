@@ -4,6 +4,7 @@ import { FC } from 'react';
 import FeedItem from "../Feed/FeedItem";
 import { useEffect } from "react";
 import { connect, disconnect } from "../../services/historySlice";
+import { ALL_ORDERS_URL } from "../../utils/burger-api";
 
 
 const HistoryOrders: FC = () => {
@@ -12,18 +13,11 @@ const HistoryOrders: FC = () => {
 
   const dispatch = useAppDispatch();
 
-  let accessToken = '';
-  const accessTokenKey = localStorage.getItem('accessToken');
-  if (accessTokenKey) {
-    accessToken = accessTokenKey.replace(/^.{7}/, '')
-  }
 
-  const urlWebSocket = `wss://norma.nomoreparties.space/orders?accessToken=${accessToken}`;
 
   useEffect(() => {
-    dispatch(connect(urlWebSocket));
+    dispatch(connect(ALL_ORDERS_URL));
     
-
     return () => {
       dispatch(disconnect());
     };
@@ -31,7 +25,9 @@ const HistoryOrders: FC = () => {
 
   return (
     <div className={styles.orders_list}>
+      <div className={styles.ordersWrap}>
       {orders.map(order => <FeedItem key={order._id} order={order} />)}
+      </div>
     </div>
   )
 }

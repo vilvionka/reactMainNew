@@ -1,16 +1,26 @@
 import { FC, useMemo } from "react";
-import { useParams } from "react-router-dom";
 import { useAppSelector } from "../../services/hooks";
 import styles from "./../Feed/Feed.module.css";
 import briliant from "../../image/briliant.svg";
+import { useLocation, useParams } from "react-router-dom";
 
 
 
 const FeedElemPage: FC = () => {
   const { id } = useParams();
-  const { orders } = useAppSelector((state) => state.feedStore);
+  const location = useLocation();
+
+  const isProfile = location.pathname.includes('/profile');
+
+
+  const orders = useAppSelector((state) =>
+    isProfile ? state.historyStore.orders : state.feedStore.orders
+  );
   const { data } = useAppSelector((state) => state.ingredients);
   const order = orders.find((item) => item.number === Number(id));
+
+
+
 
   const statusMap: Record<string, string> = {
     done: "Выполнен",

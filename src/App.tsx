@@ -16,7 +16,7 @@ import IngredientDetails from "./components/ingredientDetails/IngredientDetails"
 import Modal from "./components/modal/Modal";
 import IngredientPage from "./pages/IngredientPage/IngredientPage";
 import { FC, useEffect } from 'react';
-import Feed from "./pages/Feed/Feedt";
+import Feed from "./pages/Feed/Feed";
 import FeedElemPage from "./pages/Feed/FeedElemPage";
 import FeedId from "./pages/Feed/FeedId";
 import HistoryOrders from "./pages/history/HistoryOrders";
@@ -56,6 +56,7 @@ const App: FC = () => {
         <Route path="/profile" element={<ProtectedRoute element={<ProfilePage />} />}>
           <Route index element={<ProfileInputs />} /> {/* Твои инпуты здесь */}
           <Route path="history" element={<HistoryOrders />} />
+          <Route path="history/:id" element={<FeedId />} />
         </Route>
 
         <Route path="/ingredient/:id" element={<IngredientPage />} />
@@ -72,6 +73,11 @@ const App: FC = () => {
             </Modal>
           } />
           <Route path="/feed/:id" element={
+            <Modal title="Детали заказа" onClose={() => navigate(-1)}>
+              <FeedElemPage />
+            </Modal>
+          } />
+          <Route path="/profile/history/:id" element={
             <Modal title="Детали заказа" onClose={() => navigate(-1)}>
               <FeedElemPage />
             </Modal>

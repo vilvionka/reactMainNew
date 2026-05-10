@@ -28,8 +28,16 @@ const FeedItem: FC<IFeedItemProps> = ({ order }) => {
   }, [order.ingredients, data]);
 
   const handleClick = () => {
-    navigate(`/feed/${order.number}`, { state: { background: location } })
-  }
+    // Проверяем, содержит ли текущий путь '/profile'
+    const isProfile = location.pathname.includes('/profile');
+    
+    // Если мы в профиле, формируем путь для личного кабинета, иначе — для общей ленты
+    const targetPath = isProfile 
+      ? `/profile/history/${order.number}` 
+      : `/feed/${order.number}`;
+  
+    navigate(targetPath, { state: { background: location } });
+  };
 
   return (
     <div className={styles.item} onClick={handleClick}>

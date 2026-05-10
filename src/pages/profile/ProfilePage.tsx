@@ -13,12 +13,14 @@ const ProfilePage: FC = () => {
   const exitProfile = () => {
     dispatch(logout());
   }
+  const setActiveClass = ({ isActive }: { isActive: boolean }) =>
+    isActive ? `${styles.link} ${styles.active}` : styles.link;
 
   return (
     <div className={styles.wrap}>
       <div className={styles.discription}>
-        <NavLink to="/profile" end><span>Профиль</span></NavLink>
-        <NavLink to="/profile/history"><span>История заказов</span></NavLink>
+        <NavLink to="/profile" end className={setActiveClass}><span>Профиль</span></NavLink>
+        <NavLink to="/profile/history" className={setActiveClass}><span>История заказов</span></NavLink>
         <div className={styles.exit} onClick={exitProfile}>Выход</div>
         <p>В этом разделе вы можете
           изменить&nbsp;свои персональные данные</p>

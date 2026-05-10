@@ -15,7 +15,7 @@
   align-items: flex-end;
   margin-top: 20px;
   width: 100%;
-
+  cursor: pointer;
 }
 
 .tabItem {
@@ -36,7 +36,8 @@
   border-color: #4C4CFF;
   color: #F2F2F3;
 }
-.scrollBox{
+
+.scrollBox {
   height: calc(100svh - 330px);
   overflow-y: scroll;
   margin-top: 40px;
@@ -57,4 +58,3 @@
   background: #8585AD;
   border-radius: 0px;
 }
-

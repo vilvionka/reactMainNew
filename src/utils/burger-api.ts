@@ -78,6 +78,7 @@ export const getUserApi = (): Promise<IAuthResponse> =>{
     method: 'GET',
     headers: {
       "Content-Type": "application/json",
+      Authorization: localStorage.getItem('accessToken') || ''
     }
    }).then(res => checkResponse<IAuthResponse>(res));
 }

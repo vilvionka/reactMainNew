@@ -186,3 +186,55 @@
   color: #8585AD;
   margin-top: 80px;
 }
+
+.orders_list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: calc(100svh - 228px);
+  padding-right: 20px;
+  width: 700px;
+}
+
+.ordersWrap {
+  width: 100%;
+  overflow-x: scroll;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 20px;
+}
+
+.ordersWrap::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ordersWrap::-webkit-scrollbar-track {
+  background-color: #2F2F37;
+  border-radius: 0px;
+}
+
+.ordersWrap::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: #8585AD;
+  border-radius: 0px;
+}
+
+.discription .link span {
+  text-decoration: none;
+  color: #8585AD;
+  /* Серый цвет из дизайна Stellar Burgers */
+  transition: color 0.2s ease;
+}
+
+/* Ссылки при наведении */
+.discription .link:hover span {
+  color: #F2F2F3;
+}
+
+/* Класс для активной ссылки */
+.discription .active span {
+  color: #F2F2F3 !important;
+  /* Чистый белый/светлый цвет из дизайна */
+}

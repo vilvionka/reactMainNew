@@ -19,7 +19,7 @@ const AppHeader: FC = () => {
     <header>
       <div className={styles.headerGreed}>
         <div className={styles.headerLeft}>
-          <div className={styles.headerItem}>
+          <div className={styles.headerItem} onClick={linkMain}>
             <img src={burger} alt="burger" />
             <span>Конструктор</span>
           </div>
@@ -28,7 +28,7 @@ const AppHeader: FC = () => {
             <Link to='feed'><span>Лента заказов</span></Link>
           </div>
         </div>
-        <div className={styles.logo} onClick={linkMain}>
+        <div className={styles.logo}>
           <img src={logo} alt="img" />
         </div>
         <div className={styles.headerItem}>
