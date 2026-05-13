@@ -18,7 +18,7 @@ const initialState: IConstructorState = {
 }
 
 
-const constructorSlice = createSlice({
+export const constructorSlice = createSlice({
   name: 'BurgerConstructor',
   initialState,
   reducers: {
